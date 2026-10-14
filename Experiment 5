@@ -1,0 +1,66 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyPiTt/IwQJTfGWZdjSC3m5V",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/nithinchowdary127/MLA0201/blob/main/Experiment%205\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fJdZkVyZtZCq",
+        "outputId": "78eb950e-0f13-416f-f7ca-07f83322888b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Predicted Class: 0\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "from sklearn.neighbors import KNeighborsClassifier\n",
+        "\n",
+        "X = [[1, 2], [2, 3], [3, 3], [6, 7], [7, 8], [8, 8]]\n",
+        "y = [0, 0, 0, 1, 1, 1]\n",
+        "\n",
+        "knn = KNeighborsClassifier(n_neighbors=3)\n",
+        "knn.fit(X, y)\n",
+        "\n",
+        "new_data = [[4, 4]]\n",
+        "prediction = knn.predict(new_data)\n",
+        "\n",
+        "print(\"Predicted Class:\", prediction[0])"
+      ]
+    }
+  ]
+}
