@@ -1,0 +1,72 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPFt5QDmoO5pVo0O8BTGIEM",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/nithinchowdary127/MLA0201/blob/main/Experinment%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vAuiMRIyo9n4",
+        "outputId": "d116acd1-e4aa-4c40-f2ff-b8dfa11a9e04"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     Sky AirTemp Humidity    Wind Water Forecast EnjoySport\n",
+            "0  Sunny    Warm   Normal  Strong  Warm     Same        Yes\n",
+            "1  Sunny    Warm     High  Strong  Warm     Same        Yes\n",
+            "2  Rainy    Cold     High  Strong  Warm   Change         No\n",
+            "3  Sunny    Warm     High  Strong  Warm     Same        Yes\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "data = {\n",
+        "    'Sky': ['Sunny', 'Sunny', 'Rainy', 'Sunny'],\n",
+        "    'AirTemp': ['Warm', 'Warm', 'Cold', 'Warm'],\n",
+        "    'Humidity': ['Normal', 'High', 'High', 'High'],\n",
+        "    'Wind': ['Strong', 'Strong', 'Strong', 'Strong'],\n",
+        "    'Water': ['Warm', 'Warm', 'Warm', 'Warm'],\n",
+        "    'Forecast': ['Same', 'Same', 'Change', 'Same'],\n",
+        "    'EnjoySport': ['Yes', 'Yes', 'No', 'Yes']\n",
+        "}\n",
+        "\n",
+        "df = pd.DataFrame(data)\n",
+        "df.to_csv('training_data.csv', index=False)\n",
+        "\n",
+        "print(df)"
+      ]
+    }
+  ]
+}
