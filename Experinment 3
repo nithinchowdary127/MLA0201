@@ -1,0 +1,82 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLqlX5cEqueJRctu7K7YQP",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/nithinchowdary127/MLA0201/blob/main/Experinment%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uTljy-jzrea2",
+        "outputId": "9507d1f1-678c-4014-9bc9-9dcc75cf854e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "    Outlook Temperature Humidity    Wind Play\n",
+            "0     Sunny         Hot     High    Weak   No\n",
+            "1     Sunny         Hot     High  Strong   No\n",
+            "2  Overcast         Hot     High    Weak  Yes\n",
+            "3      Rain        Mild     High    Weak  Yes\n",
+            "4      Rain        Cool   Normal    Weak  Yes\n",
+            "5      Rain        Cool   Normal  Strong   No\n",
+            "6  Overcast        Cool   Normal  Strong  Yes\n",
+            "7     Sunny        Mild     High    Weak   No\n",
+            "8     Sunny        Cool   Normal    Weak  Yes\n",
+            "9      Rain        Mild   Normal  Strong  Yes\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.tree import DecisionTreeClassifier, plot_tree\n",
+        "import matplotlib.pyplot as plt\n",
+        "from sklearn.preprocessing import LabelEncoder\n",
+        "\n",
+        "data = {\n",
+        "    'Outlook': ['Sunny', 'Sunny', 'Overcast', 'Rain', 'Rain',\n",
+        "                'Rain', 'Overcast', 'Sunny', 'Sunny', 'Rain'],\n",
+        "    'Temperature': ['Hot', 'Hot', 'Hot', 'Mild', 'Cool',\n",
+        "                    'Cool', 'Cool', 'Mild', 'Cool', 'Mild'],\n",
+        "    'Humidity': ['High', 'High', 'High', 'High', 'Normal',\n",
+        "                 'Normal', 'Normal', 'High', 'Normal', 'Normal'],\n",
+        "    'Wind': ['Weak', 'Strong', 'Weak', 'Weak', 'Weak',\n",
+        "             'Strong', 'Strong', 'Weak', 'Weak', 'Strong'],\n",
+        "    'Play': ['No', 'No', 'Yes', 'Yes', 'Yes',\n",
+        "             'No', 'Yes', 'No', 'Yes', 'Yes']\n",
+        "}\n",
+        "\n",
+        "df = pd.DataFrame(data)\n",
+        "print(df)"
+      ]
+    }
+  ]
+}
